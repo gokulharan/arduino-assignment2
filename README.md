@@ -9,8 +9,6 @@ volatile uint8_t ledState = 0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
-
-  // Configure Timer1 for interrupt every 250 milliseconds
   TCCR1A = 0;
   TCCR1B = 0;
   TCNT1 = 0;
@@ -44,8 +42,5 @@ ISR(TIMER1_COMPA_vect) {
 }
 
 int readTemperature() {
-  // Replace this function with your code to read the LM35 temperature sensor
-  // and return the temperature value.
-  // For simplicity, I'll return a dummy value of 25 here.
   return 25;
 }
